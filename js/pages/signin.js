@@ -13,7 +13,7 @@ export function signinPage() {
         app.classList.add('app');
         homepage.appendChild(app); // Ajoutez app à homepage
     }
-    document.querySelector(".logout").style.display = 'none';
+    // document.querySelector(".logout").style.display = 'none';
     // Nettoyez le contenu existant de .app et ajoutez le formulaire de connexion
     app.innerHTML = "";
     app.appendChild(createLoginForm());

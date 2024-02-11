@@ -22,6 +22,8 @@ function createContainer() {
         app.classList.add('app');
         homepage.appendChild(app); // Ajoutez app à homepage
     }
+    document.querySelector(".logout").style.display = 'block';
+
     const block1 = document.createElement("div")
     const block2 = document.createElement("div")
     const block3 = document.createElement("div")
