@@ -2,7 +2,7 @@ import { help } from "./help.js"
 import { graphqlQuery } from "./query.js"
 import { drawGraphics } from "./drawGraphics.js"
 import { getDatas } from "./getdatas.js"
-
+import { router } from "../router.js"
 const graphqlUrl = 'https://learn.zone01dakar.sn/api/graphql-engine/v1/graphql'
 
 export const homepageModule = {
@@ -63,6 +63,11 @@ export const homepageModule = {
                     const xpsvg =  drawGraphics.drawLinerGraphic(xpProgressData,600, 400,1,"red")
                     document.querySelector(".progress").appendChild(xpsvg)
                   
+                })
+                .catch(err => {
+                    // window.history.pushState( "/signin" , "", "/index.html")
+                    // window.location.pathname = "/signin"
+                    router.navigate("/signin")
                 })
             })
         },                   

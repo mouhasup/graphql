@@ -24,7 +24,9 @@ export const graphqlQuery = `query GetInfo($objectName: String!) {
         }
     skill:   transaction(
       distinct_on: [type]
-      where: {type: {_like: "%skill%"}}) {
+      where: {type: {_like: "%skill%"}}
+      order_by: { type: asc, amount: desc })
+      {
       amount
       type
     }

@@ -2,9 +2,11 @@
 
 .toppage {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     position: relative;
-    font-size: 30px;
+    font-size: 3vw;
+    flex-wrap: wrap;
 }
 
 .app {
@@ -15,9 +17,43 @@
     flex-wrap: wrap;
     /* justify-content: center; */
 }
+.cave {
+  background-color: #222124;
+  width: fit-content;
+  min-width: fit-content;
+  border: #686868;
+  border-image-width: 1;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;   
+}
 .box {
     display: flex;
     
+}
+@media (max-width: 800px) {
+  .box, .toppage {
+    flex-direction: column !important;
+  }
+  .cave, .userinfos, .skills, .audits{
+    width: 80vw !important;
+  }
+}
+
+@media (max-width:420px) {
+  .logout {
+    position: relative !important;
+    font-size: 15px;
+    width: fit-content;
+    right: auto !important;
+  }
+  .xps {
+    font-size: 100px !important;
+  }
+  .toppage {
+    justify-content: center !important;;
+  }
 }
 
 .auth-form {
@@ -25,7 +61,7 @@
     background-color: #222124;
     justify-content: center;
     width: fit-content;
-    margin-top: 50px;
+  margin-top: 50px;
 
     padding: 10px;
     border-radius: 10px;
@@ -48,7 +84,6 @@
     color: white;
     padding: 5px;
     font-size: 18px;
-    margin: 20px;
 }
 .submit {
   cursor: pointer;
@@ -70,16 +105,7 @@
     cursor: pointer;
 }
 
-.cave {
-    background-color: #222124;
-    width: fit-content;
-    border: #686868;
-    border-image-width: 1;
-    border-style: solid;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px;   
-  }
+
 
 .audits {
     width: 30vw;
@@ -118,7 +144,6 @@
     font-size:30px;
     padding-bottom:20px;
     color: white;
-
   }
   .auditGraph{
     display:flex;
